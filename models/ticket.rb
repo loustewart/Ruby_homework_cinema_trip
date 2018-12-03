@@ -49,15 +49,5 @@ class Ticket
     @id = result[0],['id'].to_i
   end
 
-  def customer()
-    sql = "SELECT * FROM customers WHERE id = $1"
-    values = [@customer_id]
-    customer_hash = SqlRunner.run(sql, values)[0]
-    customer = Customer.new(customer_hash)
-    return customer
-  end
-
-
-
 
 end
